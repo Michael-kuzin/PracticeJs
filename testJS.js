@@ -111,25 +111,39 @@
 // console.log(factorial(5))
 
 
-function factorials(n) {
-  if(n != 1) {
-    return n * factorials(n - 1)
-  }
-  return 1
+// function factorial(n) {
+//   if(n != 1) {
+//     return n * factorial(n - 1)
+//   }
+//   return 1
+// }
+//
+// console.log(factorial(5))
+//
+//
+//
+// let factorial = function(n) {
+//   return (function count(n) {
+//     if(n === 0) {
+//       return 1
+//     }
+//     return count(n - 1) * n
+//   })(n);
+// }
+//
+// let number = factorial(5);
+// console.log(number)
+
+let arr = [1,2,3]
+
+
+function list() {
+  list.__proto__ = Array;
+      return this.join('/')
 }
 
-console.log(factorials(5))
 
+let customFunction =  list.bind(Array.prototype)
 
-
-let factorial = function(n) {
-  return (function count(n) {
-    if(n === 0) {
-      return 1
-    }
-    return count(n - 1) * n
-  })(n);
-}
-
-let number = factorial(5);
-console.log(number)
+let newarr = arr.customFunction()
+console.log(newarr);
